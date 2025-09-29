@@ -56,7 +56,7 @@
 </head>
 <body>
   <header class="header-bar">
-    <h2 class="logo">Team Hayuk Meluncur</h2>
+    <img src="images/THM.ico" style="width:48px;height:48px;"></img>
     <nav aria-label="Main navigation">
       <a href="#hero">Beranda</a>
       <a href="#struktur">Struktur</a>
@@ -71,15 +71,28 @@
     </label>
   </header>
 
-  <section id="hero" class="site-section-hero">
-    <div class="hero-text">
-      <h1>Welcome to Team Hayuk Meluncur</h1>
-      <p>Eat 🍴 , Sleep 😴 , Holiday 🛵, Repeat 🔁</p>
-    </div>
-  </section>
+  <section id="hero" style="
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('images/bukber.jpg') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff; /* ubah ke putih biar kontras */
+  position: relative;
+">
+  <div style="
+    padding: 20px 40px;
+    border-radius: 10px;
+  ">
+    <h1>Welcome to Team Hayuk Meluncur</h1>
+    <p>Eat 🍴 , Sleep 😴 , Holiday 🛵, Repeat 🔁</p>
+  </div>
+</section>
 
   <section id="struktur" class="org-section">
-    <h2>Struktur Organisasi</h2>
+    <h2>Struktur</h2>
     <div class="org-container">
       <div class="org-card">
         <img src="images/isra.png" alt="Foto Isra Rizaldi" loading="lazy">
@@ -112,12 +125,12 @@
         <p>Co-Founder</p>
       </div>
       <div class="org-card">
-        <img src="images/placeholder.png" alt="Foto Yunita" loading="lazy">
+        <img src="images/yunita.jpg" alt="Foto Yunita" loading="lazy">
         <h3>Yunita</h3>
         <p>Co-Founder</p>
       </div>
       <div class="org-card">
-        <img src="images/nadiva.png" alt="Foto Nadiva" loading="lazy">
+        <img src="images/diva.jpg" alt="Foto Nadiva" loading="lazy">
         <h3>Nadiva</h3>
         <p>Co-Founder</p>
       </div>
@@ -155,7 +168,11 @@
       <a href="images/pulau.jpg" data-fancybox="gallery"><img src="images/pulau.jpg" alt="Pulau" loading="lazy"></a>
       <a href="images/olahraga.jpg" data-fancybox="gallery"><img src="images/olahraga.jpg" alt="Olahraga" loading="lazy"></a>
       <a href="images/berbagi.jpg" data-fancybox="gallery"><img src="images/berbagi.jpg" alt="Berbagi" loading="lazy"></a>
+      <a href="images/touring.jpg" data-fancybox="gallery"><img src="images/touring.jpg" alt="Puncak" loading="lazy"></a>
+      <a href="images/nongskuy.jpg" data-fancybox="gallery"><img src="images/nongskuy.jpg" alt="Nongskuy" loading="lazy"></a>
+      <a href="images/makan.JPG" data-fancybox="gallery"><img src="images/makan.JPG" alt="Makan" loading="lazy"></a>
       <video src="images/ggi.mp4" controls loop muted></video>
+      <video src="images/camping2.mp4" controls loop muted></video>
     </div>
   </section>
 
