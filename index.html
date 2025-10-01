@@ -17,46 +17,10 @@
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    body {
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    /* Scroll to Top */
-    #scrollTopBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: none;
-      background: #333;
-      color: #fff;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 18px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transition: background 0.3s;
-      z-index: 999;
-    }
-    #scrollTopBtn:hover {
-      background: #555;
-    }
-
-    /* Hover effect cards */
-    .org-card, .activity-card {
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .org-card:hover, .activity-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    }
-  </style>
 </head>
 <body>
   <header class="header-bar">
-    <img src="images/THM.ico" style="width:48px;height:48px;"></img>
+    <img src="images/THM.ico" style="width:48px;height:48px;">
     <nav aria-label="Main navigation">
       <a href="#hero">Beranda</a>
       <a href="#struktur">Struktur</a>
@@ -71,31 +35,18 @@
     </label>
   </header>
 
-  <section id="hero" style="
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-              url('images/bukber.jpg') no-repeat center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff; /* ubah ke putih biar kontras */
-  position: relative;
-">
-  <div style="
-    padding: 20px 40px;
-    border-radius: 10px;
-  ">
-    <h1>Welcome to Team Hayuk Meluncur</h1>
-    <p>Eat 🍴 , Sleep 😴 , Holiday 🛵, Repeat 🔁</p>
-  </div>
-</section>
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <h1>Welcome to Team Hayuk Meluncur</h1>
+      <p>Eat 🍴 , Sleep 😴 , Holiday 🛵, Repeat 🔁</p>
+    </div>
+  </section>
 
   <section id="struktur" class="org-section">
     <h2>Struktur</h2>
     <div class="org-container">
       <div class="org-card">
-        <img src="images/isra.png" alt="Foto Isra Rizaldi" loading="lazy">
+        <img src="images/isra1.jpg" alt="Foto Isra Rizaldi" loading="lazy">
         <h3>Isra Rizaldi</h3>
         <p>Founder</p>
       </div>
@@ -141,7 +92,7 @@
     <h2>Kegiatan</h2>
     <div class="activity-container">
       <div class="activity-card">
-        <img src="images/camping.jpg" alt="Camping di alam terbuka" loading="lazy">
+        <img src="images/camping1.jpg" alt="Camping di alam terbuka" loading="lazy">
         <h3>Camping</h3>
         <p>Kegiatan Camping di alam terbuka</p>
       </div>
@@ -151,7 +102,7 @@
         <p>Menjelajahi berbagai destinasi wisata</p>
       </div>
       <div class="activity-card">
-        <img src="images/placeholder.png" alt="Berbagi Bersama" loading="lazy">
+        <img src="images/berbagi1.jpg" alt="Berbagi Bersama" loading="lazy">
         <h3>Berbagi Bersama</h3>
         <p>Kegiatan sosial berbagi kebahagiaan</p>
       </div>
@@ -171,8 +122,13 @@
       <a href="images/touring.jpg" data-fancybox="gallery"><img src="images/touring.jpg" alt="Puncak" loading="lazy"></a>
       <a href="images/nongskuy.jpg" data-fancybox="gallery"><img src="images/nongskuy.jpg" alt="Nongskuy" loading="lazy"></a>
       <a href="images/makan.JPG" data-fancybox="gallery"><img src="images/makan.JPG" alt="Makan" loading="lazy"></a>
+      <a href="images/snorkling1.jpg" data-fancybox="gallery"><img src="images/snorkling1.jpg" alt="Snorkling" loading="lazy"></a>
+      <a href="images/nongskuy1.jpg" data-fancybox="gallery"><img src="images/nongskuy1.jpg" alt="Nongskuy" loading="lazy"></a>
+      <a href="images/berbagi2.jpg" data-fancybox="gallery"><img src="images/berbagi2.jpg" alt="Berbagi" loading="lazy"></a>
       <video src="images/ggi.mp4" controls loop muted></video>
       <video src="images/camping2.mp4" controls loop muted></video>
+      <video src="images/berbagi.mp4" controls loop muted></video>
+      <video src="images/touring.mp4" controls loop muted></video>
     </div>
   </section>
 
@@ -195,55 +151,6 @@
   <script src="js/aos.js"></script>
   <script src="js/lozad.min.js"></script>  
   <script src="js/jquery.fancybox.min.js"></script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const modeToggle = document.getElementById('mode-toggle');
-      const body = document.body;
-      const iconLight = document.getElementById('icon-light');
-      const iconDark = document.getElementById('icon-dark');
-      const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-      const enableDarkMode = () => {
-        body.classList.add('dark-mode');
-        localStorage.setItem('dark-mode', 'enabled');
-        iconLight.style.display = 'none';
-        iconDark.style.display = 'inline';
-      };
-
-      const disableDarkMode = () => {
-        body.classList.remove('dark-mode');
-        localStorage.setItem('dark-mode', 'disabled');
-        iconLight.style.display = 'inline';
-        iconDark.style.display = 'none';
-      };
-
-      if (localStorage.getItem('dark-mode') === 'enabled') {
-        enableDarkMode();
-        modeToggle.checked = true;
-      }
-
-      modeToggle.addEventListener('change', () => {
-        if (modeToggle.checked) {
-          enableDarkMode();
-        } else {
-          disableDarkMode();
-        }
-      });
-
-      // Scroll to Top Button
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          scrollTopBtn.style.display = "block";
-        } else {
-          scrollTopBtn.style.display = "none";
-        }
-      });
-
-      scrollTopBtn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

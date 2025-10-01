@@ -55,22 +55,22 @@ label {
 }
 
 /* ==== Hero Section ==== */
-.hero-text {
+/* Hero section */
+.hero-section {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('../images/bukber.jpg') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero-content {
   padding: 20px 40px;
   border-radius: 10px;
-  position: relative;
-  z-index: 1; /* supaya di atas overlay */
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  animation: fadeInDown 1s ease forwards;
-}
-
-.hero-text p {
-  font-size: 1.3rem;
-  animation: fadeInUp 1.2s ease forwards;
 }
 
 /* ==== Struktur Organisasi ==== */
